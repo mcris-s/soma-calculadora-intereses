@@ -4,6 +4,20 @@ from PIL import Image
 import pandas as pd
 import numpy as np
 
+# Sidebar con manual educativo
+
+with st.sidebar:
+    st.markdown("## 📘 Guía educativa")
+    st.write("Consulta la guía para entender cómo se calcula el interés compuesto mensual.")
+    with open("manual_interes_compuesto.pdf", "rb") as file:
+        st.download_button(
+            label="📄 Ver o descargar guía PDF",
+            data=file,
+            file_name="manual_interes_compuesto.pdf",
+            mime="application/pdf"
+        )
+
+
 # Configuración de la página con tema claro forzado
 st.set_page_config(
     page_title="Calculadora de Intereses",
